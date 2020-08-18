@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#80000000"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/iv_play_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_video_pause" />
+
+    <ImageView
+        android:id="@+id/iv_full_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_video_zoom_in"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/tv_current"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/iv_play_pause"
+        android:text="00:00"
+        android:textColor="#FFFEFE"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/tv_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/iv_full_mode"
+        android:text="00:00"
+        android:textColor="#FFFEFE"
+        android:textSize="11sp" />
+
+    <SeekBar
+        android:id="@+id/seekbar_playback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@id/tv_duration"
+        android:layout_toRightOf="@id/tv_current"
+        android:max="100"
+        android:maxHeight="16dp"
+        android:minHeight="16dp"
+        android:progress="0"
+        android:thumbOffset="0dp"
+        android:progressDrawable="@drawable/seekbar_videoplayer_style"
+        android:thumb="@drawable/seekbar_videoplayer_thumb" />
+
+</RelativeLayout>
